@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-asian {
+  font-family: 'Yuji Syuku', serif;
+}
+
+/* Custom scrollbar for number grid and table */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #272730;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
+
+/* Cherry blossom petals animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) translateX(120px);
+    opacity: 0.1;
+  }
+}
+
+.petal {
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(135deg, #ffb7c5, #f472b6);
+  border-radius: 12px 1px 12px 1px;
+  animation: fall linear infinite;
+}
+
+/* Glowing text effects */
+.glow-pink {
+  text-shadow: 0 0 16px rgba(244, 114, 182, 0.55);
+}
+
+.glow-box-pink {
+  box-shadow: 0 0 25px -5px rgba(244, 114, 182, 0.35);
+}
+
+.glow-box-forbidden {
+  box-shadow: 0 0 20px -5px rgba(239, 68, 68, 0.4);
+}
